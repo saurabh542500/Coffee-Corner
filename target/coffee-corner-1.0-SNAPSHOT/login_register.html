@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login / Register - Coffee Corner</title>
+    <link rel="stylesheet" href="CSS/login_register.css">
+</head>
+<body>
+    <div class="container">
+
+        <!-- Toggle Buttons -->
+        <div class="toggle-buttons">
+            <button class="toggle active" id="loginToggle">Login</button>
+            <button class="toggle" id="registerToggle">Register</button>
+            <span class="toggle-indicator"></span>
+        </div>
+
+        <!-- Login Form -->
+        <form class="form active" id="loginForm" action="UserServlet" method="post">
+            <input type="hidden" name="action" value="login">
+            <h2>Login</h2>
+            <label for="loginEmail">Email:</label>
+            <input type="email" id="loginEmail" name="email" placeholder="Enter your email" required>
+            
+            <label for="loginPassword">Password:</label>
+            <input type="password" id="loginPassword" name="password" placeholder="Enter your password" required>
+            
+            <div class="button-row">
+                <a href="index.html" class="btn1">← Back</a>
+                <button type="submit" class="btn2">Login</button>
+            </div>
+        </form>
+
+        <!-- Register Form -->
+        <form class="form" id="registerForm" action="UserServlet" method="post">
+            <input type="hidden" name="action" value="register">
+            <h2>Register</h2>
+            <label for="registerName">Name:</label>
+            <input type="text" id="registerName" name="name" placeholder="Enter your name" required>
+            
+            <label for="registerEmail">Email:</label>
+            <input type="email" id="registerEmail" name="email" placeholder="Enter your email" required>
+            
+            <label for="registerDOB">DOB:</label>
+            <input type="date" id="registerDOB" name="dob" required>
+            
+            <label for="registerAddress">Address:</label>
+            <input type="text" id="registerAddress" name="address" placeholder="Enter your address" required>
+            
+            <label for="registerPassword">Password:</label>
+            <input type="password" id="registerPassword" name="password" placeholder="Enter your password" required>
+            
+            <label for="registerConfirm">Confirm Password:</label>
+            <input type="password" id="registerConfirm" name="confirm_password" placeholder="Confirm your password" required>
+            
+            <div class="button-row">
+                <a href="index.html" class="btn1">← Back</a>
+                <button type="submit" class="btn2">Register</button>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        const loginToggle = document.getElementById('loginToggle');
+        const registerToggle = document.getElementById('registerToggle');
+        const loginForm = document.getElementById('loginForm');
+        const registerForm = document.getElementById('registerForm');
+        const indicator = document.querySelector('.toggle-indicator');
+
+        loginToggle.addEventListener('click', () => {
+            loginForm.classList.add('active');
+            registerForm.classList.remove('active');
+            loginToggle.classList.add('active');
+            registerToggle.classList.remove('active');
+            indicator.style.transform = 'translateX(0)';
+        });
+
+        registerToggle.addEventListener('click', () => {
+            registerForm.classList.add('active');
+            loginForm.classList.remove('active');
+            registerToggle.classList.add('active');
+            loginToggle.classList.remove('active');
+            indicator.style.transform = 'translateX(100%)';
+        });
+    </script>
+</body>
+</html>

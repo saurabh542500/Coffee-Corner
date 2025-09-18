@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Place Order - Coffee Corner</title>
+    <link rel="stylesheet" href="CSS/online_order.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Place Your Order</h2>
+        <form action="OrderServlet" method="POST">
+            <label for="name">Customer Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="contact">Contact Number:</label>
+            <input type="tel" id="contact" name="contact" required>
+
+            <h3>Select Items:</h3>
+
+            <div class="menu-item">
+                <label><input type="checkbox" name="items" value="Coffee"> Coffee</label>
+                <input type="number" name="Coffee_qty" min="1" placeholder="Qty">
+            </div>
+
+            <div class="menu-item">
+                <label><input type="checkbox" name="items" value="Latte"> Latte</label>
+                <input type="number" name="Latte_qty" min="1" placeholder="Qty">
+            </div>
+
+            <div class="menu-item">
+                <label><input type="checkbox" name="items" value="Cappuccino"> Cappuccino</label>
+                <input type="number" name="Cappuccino_qty" min="1" placeholder="Qty">
+            </div>
+
+            <div class="menu-item">
+                <label><input type="checkbox" name="items" value="Croissant"> Croissant</label>
+                <input type="number" name="Croissant_qty" min="1" placeholder="Qty">
+            </div>
+
+			<div class="button">
+    			<a href="index.html" class="btn1">← Back</a>
+    			<button type="submit" class="btn2">Place Order</button>
+			</div>
+
+        </form>
+    </div>
+</body>
+</html>
