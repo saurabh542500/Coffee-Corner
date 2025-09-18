@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Table Booking - Coffee Corner</title>
+  <link rel="stylesheet" href="CSS/table_booking.css">
+</head>
+<body>
+  <div class="container">
+    <h2>Book a Table</h2>
+
+    <!-- Table Booking Form -->
+    <form action="BookingServlet" method="POST">
+
+      <label for="name">Full Name:</label>
+      <input type="text" name="name" id="name" required>
+
+      <label for="phone">Phone Number:</label>
+      <input type="tel" name="phone" id="phone" required>
+
+      <label for="date">Date:</label>
+      <input type="date" name="date" id="date" required>
+
+      <label for="time">Time Slot:</label>
+      <select name="time" id="time" required>
+        <option value="">--Select Time Slot--</option>
+        <option value="10:00 AM">10:00 AM</option>
+        <option value="12:00 PM">12:00 PM</option>
+        <option value="2:00 PM">2:00 PM</option>
+        <option value="4:00 PM">4:00 PM</option>
+        <option value="6:00 PM">6:00 PM</option>
+        <option value="8:00 PM">8:00 PM</option>
+      </select>
+
+      <label for="guests">Number of Guests:</label>
+      <input type="number" name="guests" id="guests" min="1" max="10" required>
+
+      <!-- Buttons: Back + Book Now -->
+      <div class="button">
+        <a href="index.html" class="btn1">← Back</a>
+        <button type="submit" class="btn2">Book Now</button>
+      </div>
+
+    </form>
+  </div>
+</body>
+</html>

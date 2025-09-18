@@ -1,0 +1,142 @@
+body {
+    font-family: "Poppins", sans-serif;
+    background: #f5f2f0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    width: 400px;
+    background: #fff7f0;
+    padding: 25px 20px;
+    border-radius: 15px;
+    border: 2px solid #f3961c;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: fadeIn 0.8s ease;
+    position: relative;
+}
+.container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+}
+
+@keyframes fadeIn {
+    from {opacity: 0; transform: translateY(-10px);}
+    to {opacity: 1; transform: translateY(0);}
+}
+
+h2, h3 {
+    text-align: center;
+    color: #3b141c;
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-top: 12px;
+    font-weight: 600;
+    color: #3b141c;
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 10px;
+    border: 2px solid #f3961c;
+    transition: all 0.3s ease;
+}
+input[type="text"]:focus,
+input[type="tel"]:focus,
+input[type="number"]:focus {
+    border-color: #3b141c;
+    box-shadow: 0 0 8px rgba(243,150,28,0.4);
+    outline: none;
+}
+
+.menu-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+    padding: 8px;
+    border-radius: 10px;
+    background: #fff3e6;
+    transition: all 0.3s ease;
+}
+.menu-item:hover {
+    background: #f3961c1a; /* subtle highlight */
+}
+
+.menu-item input[type="number"] {
+    width: 60px;
+    border-radius: 8px;
+    border: 2px solid #f3961c;
+    transition: all 0.3s ease;
+}
+.menu-item input[type="number"]:focus {
+    border-color: #3b141c;
+    box-shadow: 0 0 5px rgba(243,150,28,0.3);
+}
+
+.button {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    gap: 15px;
+}
+
+/* Back Button */
+.btn1 {
+    flex: 1;
+    background: #3b141c;
+    color: #f3961c;
+    border: 2px solid #f3961c;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    text-align: center;
+    padding: 10px 0;
+    text-decoration: none; /* important for <a> */
+    transition: all 0.3s ease;
+}
+.btn1:hover {
+    background: #f3961c;
+    color: #3b141c;
+    transform: translateY(-2px);
+}
+
+/* Place Order Button */
+.btn2 {
+    flex: 1;
+    background: #3b141c;
+    color: #f3961c;
+    border: 2px solid #f3961c;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    text-align: center;
+    padding: 10px 0;
+    transition: all 0.3s ease;
+}
+.btn2:hover {
+    background: #f3961c;
+    color: #3b141c;
+    transform: translateY(-2px);
+}
+
+@media (max-width: 480px) {
+    .button {
+        flex-direction: column;
+    }
+}
+
